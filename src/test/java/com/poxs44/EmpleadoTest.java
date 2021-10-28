@@ -17,10 +17,12 @@ public class EmpleadoTest {
     public void probarSalarioencargado()
     {
         Empleado ec = new Empleado();
-        Assert.assertEquals(1760.0, ec.calcularSalarioBruto("encargado",1250,8),0.001);
-        Assert.assertEquals(1600.0, ec.calcularSalarioBruto("encargado",1000,0),0.001);
-        Assert.assertEquals(1560.0, ec.calcularSalarioBruto("encargado",9,3),0.001);
-
+        Assert.assertEquals(1760, ec.calcularSalarioBruto("encargado",1250,8),0.001);
+        Assert.assertEquals(1600, ec.calcularSalarioBruto("encargado",1000,0),0.001);
+        Assert.assertEquals(1560, ec.calcularSalarioBruto("encargado",999.99f,3),0.001);
+        Assert.assertEquals(1500, ec.calcularSalarioBruto("encargado",500,0),0.001);
+        Assert.assertEquals(1660, ec.calcularSalarioBruto("encargado",0,8),0.001);
     }
+
 
 }

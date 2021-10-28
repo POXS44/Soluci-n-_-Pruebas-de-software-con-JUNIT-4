@@ -11,6 +11,11 @@ public class Empleado {
             float salariobruto = 0;
             float salario = 1000;
 
+            if (ventasMes <1000){
+                float menos;
+                menos = (hExtras *20)+salariobruto;
+                return menos + salario;
+            }
             if(ventasMes>=1000 || ventasMes<= 1499)
             {
                salariobruto=  salario + 100;
@@ -45,6 +50,13 @@ public class Empleado {
             stotal = (hExtras *20)+salariobruto;
             return stotal;
         }
+
+        return 0;
+    }
+
+    float calculaSalarioNeto(float salarioBruto)
+    {
+        
 
         return 0;
     }
