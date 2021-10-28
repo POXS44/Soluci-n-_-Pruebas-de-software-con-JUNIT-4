@@ -29,6 +29,12 @@ public class EmpleadoTest {
     {
         Empleado sn = new Empleado();
         Assert.assertEquals(1640, sn.calculaSalarioNeto(2000),0.001 );
+        Assert.assertEquals(1230, sn.calculaSalarioNeto(1500),0.001 );
+        Assert.assertEquals(1259.9916, sn.calculaSalarioNeto(1499.99f),0.001 );
+        Assert.assertEquals(1050, sn.calculaSalarioNeto(1250),0.001 );
+        Assert.assertEquals(840, sn.calculaSalarioNeto(1000),0.001 );
+        Assert.assertEquals(999.99, sn.calculaSalarioNeto(999.99f),0.001 );
         Assert.assertEquals(500, sn.calculaSalarioNeto(500),0.001 );
+        Assert.assertEquals(0, sn.calculaSalarioNeto(0),0.001 );
     }
 }
