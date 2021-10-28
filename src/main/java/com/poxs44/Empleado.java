@@ -54,9 +54,26 @@ public class Empleado {
         return 0;
     }
 
-    float calculaSalarioNeto(float salarioBruto)
+   public  double calculaSalarioNeto(float salarioBruto)
     {
-        
+
+        // Primera condicion si el salario bruto es menor que 1000 dolares no habra retencion
+        if (salarioBruto <1000)
+        {
+            return salarioBruto;
+        }
+        // Si salario esta entre 1000 y 1500 retencion del 16%
+        if(salarioBruto >= 1000 && salarioBruto< 1500)
+        {
+            double retencion = salarioBruto * 0.16 ;
+            return salarioBruto - retencion ;
+        }
+        // Si salario esta entre 1000 y 1500 retencion del 16%
+        if(salarioBruto >= 1500)
+        {
+            double retencion = salarioBruto * 0.18 ;
+            return salarioBruto - retencion;
+        }
 
         return 0;
     }
